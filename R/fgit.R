@@ -3,6 +3,8 @@ fgit_clone <- function(
   overwite = FALSE,
   verbose = TRUE
 ) {
+  # Check whether git is availiable
+  git_check
   # Set the domain of fastgit
   fast_git_domain <-
     "https://hub.fastgit.org/"

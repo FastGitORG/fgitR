@@ -14,10 +14,14 @@ make significant acceleration.
 
 `fgitR` is a package to do git operation with FastGit automatically.
 
+For current stage, `fgitR` is only tested under macOS, and it should
+works well on OS with POSIX. For Windows, we will test and fix in the
+future.
+
 ## Installation
 
-Once the initial development finish. We will consider to post `fgitR` to
-CRAN. So for, please install development version of `fgitR` from GitHub:
+Once the initial development finish, we will post `fgitR` to CRAN. So
+for, please install development version of `fgitR` from GitHub:
 <!-- You can install the released version of fgitR from [CRAN](https://CRAN.R-project.org) with: -->
 
 ``` r
