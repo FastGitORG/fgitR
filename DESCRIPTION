@@ -1,6 +1,6 @@
 Package: fgitR
 Type: Package
-Title: Accelerating speed to access GitHub by FastGit
+Title: Using FastGit to accelerate the access to GitHub
 Version: 0.1.0.9000
 Authors@R: 
     c(person(given = "Han",
@@ -11,10 +11,9 @@ Authors@R:
              family = "Jiang",
              role = "ctb",
              email = "243016042@qq.com"))
-Description: In China Mainland, the availibility of GitHub is not always as good as we expected.
-    FastGit<https://lbs.amap.com/api/webservice/summary> can work as a mirror of GitHub to make significant acceleration.
+Description: FastGit<https://lbs.amap.com/api/webservice/summary> can work as a mirror of GitHub to make significant acceleration.
     fgitR is a package to do git operation with FastGit automatically. 
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: 
