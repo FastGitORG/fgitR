@@ -1,3 +1,23 @@
+#' Git Clone by FastGit
+#'
+#' @param repo
+#'
+#' The repo name from GitHub.com
+#'
+#' @param overwite
+#'
+#' Overwrite the exist directories. Default is `FALSE`
+#'
+#' @param verbose
+#'
+#' Verbose logs. Default is `TRUE`
+#'
+#' @export
+#'
+#' @examples
+#'
+#' fgit_clone("womeimingzi11/fgitR", overwrite = TRUE)
+#'
 fgit_clone <- function(
   repo,
   overwite = FALSE,
