@@ -1,8 +1,22 @@
+#' A function to make directory
+#'
+#' @param target_dir
+#'
+#' Path of target Directory
+#'
+#' @param verbose
+#'
+#' Verbose logs. Default is `TRUE`
+#'
+#' @param overwite
+#'
+#' Overwrite the exist directories. Default is `FALSE`
+#'
 func_mk_dir <-
   function(
     target_dir,
-    verbose,
-    overwite
+    overwite = FALSE,
+    verbose = TRUE
   ) {
     # In case target dir exists
     # if overwrite is FALSE
@@ -31,4 +45,31 @@ func_mk_dir <-
     }
     # Create target dir
     dir.create(target_dir, recursive = TRUE)
+  }
+
+#' Extract the Repository Name from URL or Name
+#'
+#' @param url_or_repo
+#'
+#' URL or Name from GitHub.com
+#'
+#' @return
+#' Character like user/repository
+#'
+git_repo_extract <-
+  function(url_or_repo) {
+    # Check wheter input is a repo url
+    if (grepl("^http(|s)://|github.com/", url_or_repo)) {
+      message("Try to clone from repository's url")
+      # Remove .git from URL
+      url <-
+        gsub(".git$", "", url_or_repo)
+      # Remove domain from URL
+      repo <-
+        gsub("http(|s)://github.com/|github.com/", "", url)
+      return(repo)
+    } else {
+      message("Try to clone by repository's name")
+      repo <- url_or_repo
+    }
   }

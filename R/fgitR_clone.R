@@ -59,6 +59,8 @@ fgit_clone <- function(repo,
   # Convert URL to Repo
   # For repo in name format
   # nothing will happen
+
+  ##  Functions from R/utils.R
   repo <-
     git_repo_extract(url_or_repo = repo)
 
