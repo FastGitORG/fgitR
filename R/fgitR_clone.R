@@ -28,11 +28,11 @@ fgit_clone_from_url <- function(fgit_url,
   message(paste0("Repo has been cloned to", target_dir))
 }
 
-#' Git Clone from Repo by FastGit
+#' Git Clone from URL by FastGit
 #'
-#' @param repo
+#' @param url
 #'
-#' The repo name from GitHub.com
+#' The repo name or url from GitHub.com
 #'
 #' @param overwite
 #'
@@ -46,85 +46,21 @@ fgit_clone_from_url <- function(fgit_url,
 #'
 #' @examples
 #'
-#' fgit_clone_repo("womeimingzi11/fgitR", overwrite = TRUE)
+#' fgit_clone("https://github.com.cnpmjs.org/womeimingzi11/womeimingzi11", overwrite = TRUE)
+#' fgit_clone("womeimingzi11/womeimingzi11", overwrite = TRUE)
 #'
-fgit_clone_repo <- function(repo,
+fgit_clone <- function(repo,
                        dir = tempdir(),
                        overwite = FALSE,
                        verbose = TRUE) {
   # Check whether git is availiable
   git_check()
 
-  # Check wheter input is a repo
-  if(grepl("^http(|s)://|.git$",repo)) {
-    stop("Please make sure, `repo` equal to `name of repository`")
-  }
-
-  # Set the domain of fastgit
-  fast_git_domain <-
-    "https://hub.fastgit.org/"
-
-  # Jointing the Repo name and FastGit
-  # as the url of Repo
-  fgit_url <-
-    paste0(fast_git_domain, repo)
-
-  # Assemble dir/repo
-  target_dir <-
-    file.path(dir, repo)
-
-  # Functions from R/utils.R
-  func_mk_dir(target_dir = target_dir,
-              verbose = verbose,
-              overwite = overwite)
-
-  # Functions from R/fgit.R
-  # clone repot to target_dir
-  fgit_clone_from_url(fgit_url,
-                      target_dir = target_dir,
-                      overwite,
-                      verbose)
-}
-
-#' Git Clone from URL by FastGit
-#'
-#' @param url
-#'
-#' The repo name from GitHub.com
-#'
-#' @param overwite
-#'
-#' Overwrite the exist directories. Default is `FALSE`
-#'
-#' @param verbose
-#'
-#' Verbose logs. Default is `TRUE`
-#'
-#' @export
-#'
-#' @examples
-#'
-#' fgit_clone_url("https://hub.fastgit.org/womeimingzi11/amapGeocode.git", overwrite = TRUE)
-#'
-fgit_clone_url <- function(url,
-                            dir = tempdir(),
-                            overwite = FALSE,
-                            verbose = TRUE) {
-  # Check whether git is availiable
-  git_check()
-
-  # Check wheter input is a repo
-  if(!grepl("^(http|https)://", url)) {
-    stop("Please make sure, `url` equal to `url of repository`")
-  }
-
-  if(grepl(".git$", url)) {
-    url <-
-      gsub(".git$", "", url)
-  }
-
+  # Convert URL to Repo
+  # For repo in name format
+  # nothing will happen
   repo <-
-    gsub("http(|s)://github.com/", "", url)
+    git_repo_extract(url_or_repo = repo)
 
   # Set the domain of fastgit
   fast_git_domain <-
