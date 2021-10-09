@@ -9,7 +9,7 @@ fgit_clone(
   dir = tempdir(),
   overwite = FALSE,
   verbose = TRUE,
-  returen_dir = FALSE
+  return_dir = FALSE
 )
 }
 \arguments{
@@ -17,7 +17,7 @@ fgit_clone(
 
 \item{verbose}{Verbose logs. Default is `TRUE`}
 
-\item{returen_dir}{Returen dir as `target_dir` to parent environment?
+\item{return_dir}{Return directory as `target_dir` to parent environment?
 Somehow useful to catch the temp directory.}
 
 \item{url}{The repository name or url from GitHub.com}

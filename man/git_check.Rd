@@ -2,14 +2,14 @@
 % Please edit documentation in R/init.R
 \name{git_check}
 \alias{git_check}
-\title{Check whether `git` is avaiable in OS}
+\title{Check whether `git` is available in OS}
 \usage{
 git_check()
 }
 \description{
 `git` and its derived lib are under GPL license.
 There is impossible to make git as a built-in
-function for `fgitR`, which are under MIT lincese.
+function for `fgitR`, which are under MIT Licence
 }
 \details{
 Due to this, as a `fgitR` user, you have to install

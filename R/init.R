@@ -5,20 +5,20 @@
 
   packageStartupMessage(
     "
-    We thank FastGit UK Team who create fastgit.org.
-    Due to the compatibility of license,
+    We thank FastGit UK Team who creates fastgit.org.
+    Due to the compatibility of licence,
     git and its derived libs are not included in this package.
     Before you start using fgitR, please make sure you have installed git.
-    For Windows, fgitR is not avaiable yet.
+    For Windows, fgitR is not available yet.
     "
   )
 }
 
-#' Check whether `git` is avaiable in OS
+#' Check whether `git` is available in OS
 #'
 #' `git` and its derived lib are under GPL license.
 #' There is impossible to make git as a built-in
-#' function for `fgitR`, which are under MIT lincese.
+#' function for `fgitR`, which are under MIT Licence
 #'
 #' Due to this, as a `fgitR` user, you have to install
 #' `git` into your OS before using `fgitR`.

@@ -4,4 +4,4 @@
 ^README\.Rmd$
 ^\.github$
 ^\README_cache$
-^\local_test$
+local_test

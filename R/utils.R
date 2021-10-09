@@ -39,7 +39,7 @@ func_mk_dir <-
         system(rm_cmd)
         # Report a message
         if (isTRUE(verbose)) {
-          message(target_dir, "has been empty.")
+          message(target_dir, " has been empty.")
         }
       }
     }

@@ -16,7 +16,8 @@ fgit_clone_from_url <- function(fgit_url,
                                 target_dir,
                                 overwite = FALSE,
                                 verbose = TRUE) {
-  # Check whether git is availiable
+
+  # Check whether git is available
   git_check()
 
   # Assemble the Git clone command
@@ -42,9 +43,9 @@ fgit_clone_from_url <- function(fgit_url,
 #'
 #' Verbose logs. Default is `TRUE`
 #'
-#' @param returen_dir
+#' @param return_dir
 #'
-#' Returen dir as `target_dir` to parent environment?
+#' Return directory as `target_dir` to parent environment?
 #' Somehow useful to catch the temp directory.
 #'
 #' @export
@@ -57,7 +58,7 @@ fgit_clone <- function(repo,
                        dir = tempdir(),
                        overwite = FALSE,
                        verbose = TRUE,
-                       returen_dir = FALSE) {
+                       return_dir = FALSE) {
   # Check whether git is availiable
   git_check()
 
@@ -97,6 +98,6 @@ fgit_clone <- function(repo,
     verbose
   )
 
-  # Returen target_dir to parent environmental
-  if(isTRUE(returen_dir)) target_dir <<- target_dir
+  # Return target_dir to parent environmental
+  if(isTRUE(return_dir)) target_dir <<- target_dir
 }
