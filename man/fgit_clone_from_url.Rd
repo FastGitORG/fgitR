@@ -11,7 +11,7 @@ fgit_clone_from_url(fgit_url, target_dir, overwite = FALSE, verbose = TRUE)
 
 \item{verbose}{Verbose logs. Default is `TRUE`}
 
-\item{repo}{The repo name from GitHub.com}
+\item{repo}{The repository's name from GitHub.com}
 }
 \description{
 Git Clone by FastGit's URL

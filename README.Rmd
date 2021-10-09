@@ -32,18 +32,25 @@ So for, please install development version of `fgitR` from GitHub:
 <!-- You can install the released version of fgitR from [CRAN](https://CRAN.R-project.org) with: -->
 
 ``` r
+# For initial install
 remotes::install_github("womeimingzi11/fgitR")
+
+# For upgrade installed `fgitR`
+fgitR::fgitR_install("womeimingzi11/fgitR")
 ```
 
-And Yes, in the future, there will be a function like `fgitR::install_fgit("womeimingzi11/fgitR")` to accelerate the installation of development version of `fgitR`.
+<del>And Yes, in the future, there will be a function like `fgitR::install_fgit("womeimingzi11/fgitR")` to accelerate the installation of development version of `fgitR`.</del>
 
-## Example
+## Install package from Source
 
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
+```{r install_package_from_source, cache=TRUE}
 library(fgitR)
-## basic example code
+
+# fgitR can install package by Repository's URL
+fgitR_install("r-lib/diffviewer")
+
+# fgitR can install package by Repository's Name
+fgitR_install("https://github.com/r-lib/diffviewer")
 ```
 
 <!-- What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so: -->
@@ -61,3 +68,7 @@ library(fgitR)
 <!-- ``` -->
 
 <!-- In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN. -->
+
+## Code of Conduct
+
+Please note that the fgitR project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.

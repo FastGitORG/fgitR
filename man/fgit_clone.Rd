@@ -4,21 +4,29 @@
 \alias{fgit_clone}
 \title{Git Clone from URL by FastGit}
 \usage{
-fgit_clone(repo, dir = tempdir(), overwite = FALSE, verbose = TRUE)
+fgit_clone(
+  repo,
+  dir = tempdir(),
+  overwite = FALSE,
+  verbose = TRUE,
+  returen_dir = FALSE
+)
 }
 \arguments{
 \item{overwite}{Overwrite the exist directories. Default is `FALSE`}
 
 \item{verbose}{Verbose logs. Default is `TRUE`}
 
-\item{url}{The repo name or url from GitHub.com}
+\item{returen_dir}{Returen dir as `target_dir` to parent environment?
+Somehow useful to catch the temp directory.}
+
+\item{url}{The repository name or url from GitHub.com}
 }
 \description{
 Git Clone from URL by FastGit
 }
 \examples{
 
-fgit_clone("https://github.com.cnpmjs.org/womeimingzi11/womeimingzi11", overwrite = TRUE)
-fgit_clone("womeimingzi11/womeimingzi11", overwrite = TRUE)
-
+fgit_clone("https://github.com/womeimingzi11/fgitR", overwrite = TRUE)
+fgit_clone("womeimingzi11/fgitR", overwrite = TRUE)
 }

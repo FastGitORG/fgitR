@@ -25,20 +25,89 @@ for, please install development version of `fgitR` from GitHub:
 <!-- You can install the released version of fgitR from [CRAN](https://CRAN.R-project.org) with: -->
 
 ``` r
+# For initial install
 remotes::install_github("womeimingzi11/fgitR")
+
+# For upgrade installed `fgitR`
+fgitR::fgitR_install("womeimingzi11/fgitR")
 ```
 
+<del>
 And Yes, in the future, there will be a function like
 `fgitR::install_fgit("womeimingzi11/fgitR")` to accelerate the
 installation of development version of `fgitR`.
+</del>
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
+## Install package from Source
 
 ``` r
 library(fgitR)
-## basic example code
+#> 
+#>     We thank FastGit UK Team who create fastgit.org.
+#>     Due to the compatibility of license,
+#>     git and its derived libs are not included in this package.
+#>     Before you start using fgitR, please make sure you have installed git.
+#>     For Windows, fgitR is not avaiable yet.
+#> 
+
+# fgitR can install package by Repository's URL
+fgitR_install("r-lib/diffviewer")
+#> Try to clone by repository's name
+#> Repo has been cloned to/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp1UTIik/r-lib/diffviewer
+#> 
+#>      checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/Rtmp1UTIik/r-lib/diffviewer/diffviewer/DESCRIPTION’ ...  ✓  checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/Rtmp1UTIik/r-lib/diffviewer/diffviewer/DESCRIPTION’
+#>   ─  preparing ‘diffviewer’:
+#>      checking DESCRIPTION meta-information ...  ✓  checking DESCRIPTION meta-information
+#>   ─  checking for LF line-endings in source and make files and shell scripts
+#>   ─  checking for empty or unneeded directories
+#>   ─  building ‘diffviewer_0.1.1.9000.tar.gz’
+#>      
+#> Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
+#>   /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp1UTIik/diffviewer_0.1.1.9000.tar.gz \
+#>   --install-tests 
+#> * installing to library ‘/Users/chenhan/R_lib_usr’
+#> * installing *source* package ‘diffviewer’ ...
+#> ** using staged installation
+#> ** R
+#> ** inst
+#> ** byte-compile and prepare package for lazy loading
+#> ** help
+#> *** installing help indices
+#> ** building package indices
+#> ** testing if installed package can be loaded from temporary location
+#> ** testing if installed package can be loaded from final location
+#> ** testing if installed package keeps a record of temporary installation path
+#> * DONE (diffviewer)
+
+# fgitR can install package by Repository's Name
+fgitR_install("https://github.com/r-lib/diffviewer")
+#> Try to clone from repository's url
+#> /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp1UTIik/r-lib/diffviewerhas been empty.
+#> Repo has been cloned to/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp1UTIik/r-lib/diffviewer
+#> 
+#>      checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/Rtmp1UTIik/r-lib/diffviewer/diffviewer/DESCRIPTION’ ...  ✓  checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/Rtmp1UTIik/r-lib/diffviewer/diffviewer/DESCRIPTION’
+#>   ─  preparing ‘diffviewer’:
+#>      checking DESCRIPTION meta-information ...  ✓  checking DESCRIPTION meta-information
+#>   ─  checking for LF line-endings in source and make files and shell scripts
+#>   ─  checking for empty or unneeded directories
+#>   ─  building ‘diffviewer_0.1.1.9000.tar.gz’
+#>      
+#> Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
+#>   /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp1UTIik/diffviewer_0.1.1.9000.tar.gz \
+#>   --install-tests 
+#> * installing to library ‘/Users/chenhan/R_lib_usr’
+#> * installing *source* package ‘diffviewer’ ...
+#> ** using staged installation
+#> ** R
+#> ** inst
+#> ** byte-compile and prepare package for lazy loading
+#> ** help
+#> *** installing help indices
+#> ** building package indices
+#> ** testing if installed package can be loaded from temporary location
+#> ** testing if installed package can be loaded from final location
+#> ** testing if installed package keeps a record of temporary installation path
+#> * DONE (diffviewer)
 ```
 
 <!-- What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so: -->
@@ -51,3 +120,10 @@ library(fgitR)
 <!-- plot(pressure) -->
 <!-- ``` -->
 <!-- In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN. -->
+
+## Code of Conduct
+
+Please note that the fgitR project is released with a [Contributor Code
+of
+Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.
