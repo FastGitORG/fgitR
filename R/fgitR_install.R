@@ -14,7 +14,7 @@ fgitR_install <-
     # Clone repo to temp directory
     # cloned directory will return
     # as target_dir
-    fgit_clone(repo, overwite = TRUE, returen_dir = TRUE)
+    fgit_clone(repo, overwite = TRUE, return_dir = TRUE)
 
     # List sub directory
     # structure as user/repo/repo

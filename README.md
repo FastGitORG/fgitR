@@ -26,10 +26,10 @@ for, please install development version of `fgitR` from GitHub:
 
 ``` r
 # For initial install
-remotes::install_github("womeimingzi11/fgitR")
+remotes::install_github("FastGitORG/fgitR")
 
 # For upgrade installed `fgitR`
-fgitR::fgitR_install("womeimingzi11/fgitR")
+fgitR::fgitR_install("FastGitORG/fgitR")
 ```
 
 <del>
@@ -43,19 +43,19 @@ installation of development version of `fgitR`.
 ``` r
 library(fgitR)
 #> 
-#>     We thank FastGit UK Team who create fastgit.org.
-#>     Due to the compatibility of license,
+#>     We thank FastGit UK Team who creates fastgit.org.
+#>     Due to the compatibility of licence,
 #>     git and its derived libs are not included in this package.
 #>     Before you start using fgitR, please make sure you have installed git.
-#>     For Windows, fgitR is not avaiable yet.
+#>     For Windows, fgitR is not available yet.
 #> 
 
 # fgitR can install package by Repository's URL
 fgitR_install("r-lib/diffviewer")
 #> Try to clone by repository's name
-#> Repo has been cloned to/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp1UTIik/r-lib/diffviewer
+#> Repo has been cloned to/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp6tWhhk/r-lib/diffviewer
 #> 
-#>      checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/Rtmp1UTIik/r-lib/diffviewer/diffviewer/DESCRIPTION’ ...  ✓  checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/Rtmp1UTIik/r-lib/diffviewer/diffviewer/DESCRIPTION’
+#>      checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/Rtmp6tWhhk/r-lib/diffviewer/diffviewer/DESCRIPTION’ ...  ✓  checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/Rtmp6tWhhk/r-lib/diffviewer/diffviewer/DESCRIPTION’
 #>   ─  preparing ‘diffviewer’:
 #>      checking DESCRIPTION meta-information ...  ✓  checking DESCRIPTION meta-information
 #>   ─  checking for LF line-endings in source and make files and shell scripts
@@ -63,7 +63,7 @@ fgitR_install("r-lib/diffviewer")
 #>   ─  building ‘diffviewer_0.1.1.9000.tar.gz’
 #>      
 #> Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
-#>   /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp1UTIik/diffviewer_0.1.1.9000.tar.gz \
+#>   /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp6tWhhk/diffviewer_0.1.1.9000.tar.gz \
 #>   --install-tests 
 #> * installing to library ‘/Users/chenhan/R_lib_usr’
 #> * installing *source* package ‘diffviewer’ ...
@@ -82,10 +82,10 @@ fgitR_install("r-lib/diffviewer")
 # fgitR can install package by Repository's Name
 fgitR_install("https://github.com/r-lib/diffviewer")
 #> Try to clone from repository's url
-#> /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp1UTIik/r-lib/diffviewerhas been empty.
-#> Repo has been cloned to/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp1UTIik/r-lib/diffviewer
+#> /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp6tWhhk/r-lib/diffviewer has been empty.
+#> Repo has been cloned to/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp6tWhhk/r-lib/diffviewer
 #> 
-#>      checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/Rtmp1UTIik/r-lib/diffviewer/diffviewer/DESCRIPTION’ ...  ✓  checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/Rtmp1UTIik/r-lib/diffviewer/diffviewer/DESCRIPTION’
+#>      checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/Rtmp6tWhhk/r-lib/diffviewer/diffviewer/DESCRIPTION’ ...  ✓  checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/Rtmp6tWhhk/r-lib/diffviewer/diffviewer/DESCRIPTION’
 #>   ─  preparing ‘diffviewer’:
 #>      checking DESCRIPTION meta-information ...  ✓  checking DESCRIPTION meta-information
 #>   ─  checking for LF line-endings in source and make files and shell scripts
@@ -93,7 +93,7 @@ fgitR_install("https://github.com/r-lib/diffviewer")
 #>   ─  building ‘diffviewer_0.1.1.9000.tar.gz’
 #>      
 #> Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
-#>   /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp1UTIik/diffviewer_0.1.1.9000.tar.gz \
+#>   /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp6tWhhk/diffviewer_0.1.1.9000.tar.gz \
 #>   --install-tests 
 #> * installing to library ‘/Users/chenhan/R_lib_usr’
 #> * installing *source* package ‘diffviewer’ ...

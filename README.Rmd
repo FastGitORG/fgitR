@@ -33,10 +33,10 @@ So for, please install development version of `fgitR` from GitHub:
 
 ``` r
 # For initial install
-remotes::install_github("womeimingzi11/fgitR")
+remotes::install_github("FastGitORG/fgitR")
 
 # For upgrade installed `fgitR`
-fgitR::fgitR_install("womeimingzi11/fgitR")
+fgitR::fgitR_install("FastGitORG/fgitR")
 ```
 
 <del>And Yes, in the future, there will be a function like `fgitR::install_fgit("womeimingzi11/fgitR")` to accelerate the installation of development version of `fgitR`.</del>
