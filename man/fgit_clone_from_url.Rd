@@ -8,7 +8,7 @@ fgit_clone_from_url(
   fgit_url,
   target_dir,
   branch = NULL,
-  overwite = FALSE,
+  overwrite = FALSE,
   verbose = TRUE
 )
 }
@@ -17,7 +17,7 @@ fgit_clone_from_url(
 
 \item{branch}{Clone from which branch.}
 
-\item{overwite}{Overwrite the exist directories. Default is `FALSE`}
+\item{overwrite}{Overwrite the exist directories. Default is `FALSE`}
 
 \item{verbose}{Verbose logs. Default is `TRUE`}
 

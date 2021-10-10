@@ -70,13 +70,50 @@ fgit_install("r-lib/diffviewer")
 #> * DONE (diffviewer)
 ```
 
+## List all branch from Remote
+
+``` r
+branch_ls <-
+  fgit_branch("https://github.com/tidyverse/tidyverse/")
+#> Try to clone from repository's url
+
+head(branch_ls, n = 15)
+#>  [1] "heads/bump-reprex-version" "heads/fix-pkgdown"        
+#>  [3] "heads/gh-pages"            "heads/master"             
+#>  [5] "heads/more-import-from"    "pull/1/head"              
+#>  [7] "pull/100/head"             "pull/106/head"            
+#>  [9] "pull/109/head"             "pull/117/head"            
+#> [11] "pull/120/head"             "pull/122/head"            
+#> [13] "pull/122/merge"            "pull/123/head"            
+#> [15] "pull/123/merge"
+```
+
 ## To-Do
 
 -   [x] Branch
 -   [ ] Head
--   [ ] Commit (may be imported from git2r)
--   [ ] Pull
--   [ ] Push
+
+### Questionary
+
+For the initially consideration, we believe it is necessary to add
+following functions:
+
+-   Commit
+-   Pull
+-   Push
+
+Due to `git` is not only clone to local, but also contribute back. But
+in the `git clone` or `fgit clone` procedure, the remote will be set as
+`fastgit.org` or other mirror domain. Hence, there is nothing special to
+make further operations.
+
+There is definitely no reason to reinvent the wheel, import functions
+from `git2r` to implement `git clone`, `git pull` and `git push` should
+be fantastic. However, `git2r` is a GPL licensed project, while `fgitR`
+is under MIT. I am not sure if it is accpetable to import involving
+functions from `git2r` to `fgitR` without changing license?
+
+**P.S. I am not considering to change my license.**
 
 ## Code of Conduct
 

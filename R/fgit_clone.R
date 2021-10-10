@@ -12,7 +12,7 @@
 #'
 #' Clone from which branch.
 #'
-#' @param overwite
+#' @param overwrite
 #'
 #' Overwrite the exist directories. Default is `FALSE`
 #'
@@ -23,7 +23,7 @@
 fgit_clone_from_url <- function(fgit_url,
                                 target_dir,
                                 branch = NULL,
-                                overwite = FALSE,
+                                overwrite = FALSE,
                                 verbose = TRUE) {
 
   # Check whether git is available
@@ -33,21 +33,20 @@ fgit_clone_from_url <- function(fgit_url,
   # use -C argument to set the
   # target dir
   clone_cmd <-
-    if(is.null(branch)) {
+    if (is.null(branch)) {
       paste("git -C", target_dir, "clone", fgit_url)
     } else {
 
       # Detect branch existence
       ## Get branch list
-
       branch_ls_cmd <-
-        paste("git ls-remote --heads",fgit_url)
+        paste("git ls-remote", fgit_url)
 
       ranch_ls <-
         system(branch_ls_cmd, intern = TRUE)
 
       # Stop once branch not exist
-      if(!any(grepl(paste0("heads/", branch, "$"), x = ranch_ls))) {
+      if (!any(grepl(paste0(branch, "$"), x = ranch_ls))) {
         stop(branch, " branch does not exist")
       }
 
@@ -73,7 +72,11 @@ fgit_clone_from_url <- function(fgit_url,
 #'
 #' Clone from which branch.
 #'
-#' @param overwite
+#' @param repo_check
+#'
+#' Check the existence of repository
+#'
+#' @param overwrite
 #'
 #' Overwrite the exist directories. Default is `FALSE`
 #'
@@ -95,7 +98,8 @@ fgit_clone_from_url <- function(fgit_url,
 fgit_clone <- function(repo,
                        dir = tempdir(),
                        branch = NULL,
-                       overwite = FALSE,
+                       repo_check = TRUE,
+                       overwrite = FALSE,
                        verbose = TRUE,
                        return_dir = FALSE) {
   # Check whether git is availiable
@@ -108,6 +112,11 @@ fgit_clone <- function(repo,
   ##  Functions from R/utils.R
   repo <-
     git_repo_extract(url_or_repo = repo)
+
+  # Detect whether repository exists
+  if (isTRUE(repo_check)) {
+    if (httr::http_error(paste0("https://github.com/", repo))) stop("Repository may not exist")
+  }
 
   # Set the domain of fastgit
   fast_git_domain <-
@@ -126,7 +135,7 @@ fgit_clone <- function(repo,
   func_mk_dir(
     target_dir = target_dir,
     verbose = verbose,
-    overwite = overwite
+    overwrite = overwrite
   )
 
   # Functions from R/fgit.R
@@ -134,10 +143,10 @@ fgit_clone <- function(repo,
   fgit_clone_from_url(fgit_url,
     target_dir = target_dir,
     branch,
-    overwite,
+    overwrite,
     verbose
   )
 
   # Return target_dir to parent environmental
-  if(isTRUE(return_dir)) target_dir <<- target_dir
+  if (isTRUE(return_dir)) target_dir <<- target_dir
 }

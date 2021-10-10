@@ -1,0 +1,49 @@
+#' List all branch from a repository
+#'
+#' @param repo
+#'
+#' The repository's name from GitHub.com
+#'
+#' @return
+#'
+#' A vector of branches
+#'
+#' @export
+#'
+#' @examples
+#' fgit_branch("https://github.com/FastGitORG/fgitR")
+#' fgit_branch("FastGitORG/fgitR")
+#'
+fgit_branch <- function(repo) {
+  # Check whether git is availiable
+  git_check()
+
+  # Convert URL to Repo
+  # For repo in name format
+  # nothing will happen
+
+  ##  Functions from R/utils.R
+  repo <-
+    fgitR:::git_repo_extract(url_or_repo = repo)
+
+  # Detect whether repository exists
+  if (httr::http_error(paste0("https://github.com/", repo))) stop("Repository may not exist")
+
+  # Set the domain of fastgit
+  fast_git_domain <-
+    "https://hub.fastgit.org/"
+
+  # Jointing the Repo name and FastGit
+  # as the url of Repo
+  fgit_url <-
+    paste0(fast_git_domain, repo)
+
+  ## Get branch list
+  branch_ls_cmd <-
+    paste("git ls-remote",fgit_url)
+
+  ranch_ls <-
+    system(branch_ls_cmd, intern = TRUE)
+
+  gsub("^[a-zA-Z0-9]+(\tHEAD|\trefs/)", "", ranch_ls[-1])
+}

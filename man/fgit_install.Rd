@@ -4,14 +4,14 @@
 \alias{fgit_install}
 \title{Install package from GitHub by FastGit accelerating}
 \usage{
-fgit_install(repo)
+fgit_install(repo, branch = NULL, repo_check = TRUE)
 }
 \arguments{
 \item{repo}{The repository name or url from GitHub.com}
 
-\item{overwite}{Overwrite the exist directories. Default is `FALSE`}
-
 \item{branch}{Install from which branch.}
+
+\item{repo_check}{Check the existence of repository}
 }
 \description{
 Install package from GitHub by FastGit accelerating

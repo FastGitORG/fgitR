@@ -8,22 +8,20 @@
 #'
 #' Verbose logs. Default is `TRUE`
 #'
-#' @param overwite
+#' @param overwrite
 #'
 #' Overwrite the exist directories. Default is `FALSE`
 #'
 func_mk_dir <-
-  function(
-    target_dir,
-    overwite = FALSE,
-    verbose = TRUE
-  ) {
+  function(target_dir,
+           overwrite = FALSE,
+           verbose = TRUE) {
     # In case target dir exists
     # if overwrite is FALSE
     # report an Error
 
     if (dir.exists(target_dir)) {
-      if (isFALSE(overwite)) {
+      if (isFALSE(overwrite)) {
         err_msg <-
           paste(
             target_dir,

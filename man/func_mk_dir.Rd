@@ -4,12 +4,12 @@
 \alias{func_mk_dir}
 \title{A function to make directory}
 \usage{
-func_mk_dir(target_dir, overwite = FALSE, verbose = TRUE)
+func_mk_dir(target_dir, overwrite = FALSE, verbose = TRUE)
 }
 \arguments{
 \item{target_dir}{Path of target Directory}
 
-\item{overwite}{Overwrite the exist directories. Default is `FALSE`}
+\item{overwrite}{Overwrite the exist directories. Default is `FALSE`}
 
 \item{verbose}{Verbose logs. Default is `TRUE`}
 }

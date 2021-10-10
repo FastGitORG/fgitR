@@ -8,7 +8,8 @@ fgit_clone(
   repo,
   dir = tempdir(),
   branch = NULL,
-  overwite = FALSE,
+  repo_check = TRUE,
+  overwrite = FALSE,
   verbose = TRUE,
   return_dir = FALSE
 )
@@ -21,7 +22,9 @@ fgit_clone(
 
 \item{branch}{Clone from which branch.}
 
-\item{overwite}{Overwrite the exist directories. Default is `FALSE`}
+\item{repo_check}{Check the existence of repository}
+
+\item{overwrite}{Overwrite the exist directories. Default is `FALSE`}
 
 \item{verbose}{Verbose logs. Default is `TRUE`}
 
