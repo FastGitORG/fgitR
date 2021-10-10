@@ -115,6 +115,13 @@ functions from `git2r` to `fgitR` without changing license?
 
 **P.S. I am not considering to change my license.**
 
+## Bug report
+
+It’s very common for API upgrades to make the downstream application,
+like amapGeocode,which is unavailable. Feel free to [let me
+know](mailto://chenhan28@gmail.com) once it’s broken or just open an
+<a class="github-button" href="https://github.com/FastGitORG/fgitR/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Issue FastGitORG/fgitR on GitHub">Issue</a>.
+
 ## Code of Conduct
 
 Please note that the fgitR project is released with a [Contributor Code
