@@ -36,6 +36,21 @@ fgit_clone_from_url <- function(fgit_url,
     if(is.null(branch)) {
       paste("git -C", target_dir, "clone", fgit_url)
     } else {
+
+      # Detect branch existence
+      ## Get branch list
+
+      branch_ls_cmd <-
+        paste("git ls-remote --heads",fgit_url)
+
+      ranch_ls <-
+        system(branch_ls_cmd, intern = TRUE)
+
+      # Stop once branch not exist
+      if(!any(grepl(paste0("heads/", branch, "$"), x = ranch_ls))) {
+        stop(branch, " branch does not exist")
+      }
+
       paste("git -C", target_dir, "clone", fgit_url, "--single-branch --branch", branch)
     }
 

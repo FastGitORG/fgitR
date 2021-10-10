@@ -29,7 +29,7 @@ for, please install development version of `fgitR` from GitHub:
 remotes::install_github("FastGitORG/fgitR")
 
 # For upgrade installed `fgitR`
-fgitR::fgitR_install("FastGitORG/fgitR")
+fgitR::fgit_install("FastGitORG/fgitR")
 ```
 
 ## Install package from Source
@@ -41,11 +41,11 @@ library(fgitR)
 # fgitR_install("https://github.com/r-lib/diffviewer")
 
 # fgitR can install package by Repository's URL
-fgitR_install("r-lib/diffviewer")
+fgit_install("r-lib/diffviewer")
 #> Try to clone by repository's name
-#> Repo has been cloned to/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//RtmpaIUsRg/r-lib/diffviewer
+#> Repo has been cloned to/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//RtmpOKf9w5/r-lib/diffviewer
 #> 
-#>      checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/RtmpaIUsRg/r-lib/diffviewer/diffviewer/DESCRIPTION’ ...  ✓  checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/RtmpaIUsRg/r-lib/diffviewer/diffviewer/DESCRIPTION’
+#>      checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/RtmpOKf9w5/r-lib/diffviewer/diffviewer/DESCRIPTION’ ...  ✓  checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/RtmpOKf9w5/r-lib/diffviewer/diffviewer/DESCRIPTION’
 #>   ─  preparing ‘diffviewer’:
 #>      checking DESCRIPTION meta-information ...  ✓  checking DESCRIPTION meta-information
 #>   ─  checking for LF line-endings in source and make files and shell scripts
@@ -53,7 +53,7 @@ fgitR_install("r-lib/diffviewer")
 #>   ─  building ‘diffviewer_0.1.1.9000.tar.gz’
 #>      
 #> Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
-#>   /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//RtmpaIUsRg/diffviewer_0.1.1.9000.tar.gz \
+#>   /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//RtmpOKf9w5/diffviewer_0.1.1.9000.tar.gz \
 #>   --install-tests 
 #> * installing to library ‘/Users/chenhan/R_lib_usr’
 #> * installing *source* package ‘diffviewer’ ...

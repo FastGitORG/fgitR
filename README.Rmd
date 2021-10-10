@@ -36,7 +36,7 @@ So for, please install development version of `fgitR` from GitHub:
 remotes::install_github("FastGitORG/fgitR")
 
 # For upgrade installed `fgitR`
-fgitR::fgitR_install("FastGitORG/fgitR")
+fgitR::fgit_install("FastGitORG/fgitR")
 ```
 
 ## Install package from Source
@@ -48,7 +48,7 @@ library(fgitR)
 # fgitR_install("https://github.com/r-lib/diffviewer")
 
 # fgitR can install package by Repository's URL
-fgitR_install("r-lib/diffviewer")
+fgit_install("r-lib/diffviewer")
 ```
 
 ## To-Do
