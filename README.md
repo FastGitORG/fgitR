@@ -7,6 +7,8 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![Codecov test
+coverage](https://codecov.io/gh/FastGitORG/fgitR/branch/main/graph/badge.svg)](https://codecov.io/gh/FastGitORG/fgitR?branch=main)
 <!-- badges: end -->
 
 [FastGit](https://doc.fastgit.org/) can work as a mirror of GitHub to
