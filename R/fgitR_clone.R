@@ -4,6 +4,14 @@
 #'
 #' The repository's name from GitHub.com
 #'
+#' @param target_dir
+#'
+#' The output directory
+#'
+#' @param branch
+#'
+#' Clone from which branch.
+#'
 #' @param overwite
 #'
 #' Overwrite the exist directories. Default is `FALSE`
@@ -14,6 +22,7 @@
 #'
 fgit_clone_from_url <- function(fgit_url,
                                 target_dir,
+                                branch = NULL,
                                 overwite = FALSE,
                                 verbose = TRUE) {
 
@@ -24,16 +33,30 @@ fgit_clone_from_url <- function(fgit_url,
   # use -C argument to set the
   # target dir
   clone_cmd <-
-    paste0("git -C ", target_dir, " clone ", fgit_url)
+    if(is.null(branch)) {
+      paste("git -C", target_dir, "clone", fgit_url)
+    } else {
+      paste("git -C", target_dir, "clone", fgit_url, "--single-branch --branch", branch)
+    }
+
   system(clone_cmd)
   message(paste0("Repo has been cloned to", target_dir))
 }
 
 #' Git Clone from URL by FastGit
 #'
-#' @param url
+#' @param repo
 #'
 #' The repository name or url from GitHub.com
+#'
+#' @param dir
+#'
+#' The output directory.
+#' `tempdir()` will be used by default.
+#'
+#' @param branch
+#'
+#' Clone from which branch.
 #'
 #' @param overwite
 #'
@@ -56,6 +79,7 @@ fgit_clone_from_url <- function(fgit_url,
 #' fgit_clone("womeimingzi11/fgitR", overwrite = TRUE)
 fgit_clone <- function(repo,
                        dir = tempdir(),
+                       branch = NULL,
                        overwite = FALSE,
                        verbose = TRUE,
                        return_dir = FALSE) {
@@ -94,6 +118,7 @@ fgit_clone <- function(repo,
   # clone repot to target_dir
   fgit_clone_from_url(fgit_url,
     target_dir = target_dir,
+    branch,
     overwite,
     verbose
   )

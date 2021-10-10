@@ -7,20 +7,26 @@
 fgit_clone(
   repo,
   dir = tempdir(),
+  branch = NULL,
   overwite = FALSE,
   verbose = TRUE,
   return_dir = FALSE
 )
 }
 \arguments{
+\item{repo}{The repository name or url from GitHub.com}
+
+\item{dir}{The output directory.
+`tempdir()` will be used by default.}
+
+\item{branch}{Clone from which branch.}
+
 \item{overwite}{Overwrite the exist directories. Default is `FALSE`}
 
 \item{verbose}{Verbose logs. Default is `TRUE`}
 
 \item{return_dir}{Return directory as `target_dir` to parent environment?
 Somehow useful to catch the temp directory.}
-
-\item{url}{The repository name or url from GitHub.com}
 }
 \description{
 Git Clone from URL by FastGit

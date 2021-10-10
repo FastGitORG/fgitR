@@ -39,23 +39,21 @@ remotes::install_github("FastGitORG/fgitR")
 fgitR::fgitR_install("FastGitORG/fgitR")
 ```
 
-<del>And Yes, in the future, there will be a function like `fgitR::install_fgit("womeimingzi11/fgitR")` to accelerate the installation of development version of `fgitR`.</del>
-
 ## Install package from Source
 
 ```{r install_package_from_source, cache=TRUE}
 library(fgitR)
 
+# fgitR can install package by Repository's Name
+# fgitR_install("https://github.com/r-lib/diffviewer")
+
 # fgitR can install package by Repository's URL
 fgitR_install("r-lib/diffviewer")
-
-# fgitR can install package by Repository's Name
-fgitR_install("https://github.com/r-lib/diffviewer")
 ```
 
 ## To-Do
 
-- [ ] Branch
+- [X] Branch
 - [ ] Head
 - [ ] Commit (may be imported from git2r)
 - [ ] Pull

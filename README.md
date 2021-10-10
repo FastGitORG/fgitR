@@ -32,30 +32,20 @@ remotes::install_github("FastGitORG/fgitR")
 fgitR::fgitR_install("FastGitORG/fgitR")
 ```
 
-<del>
-And Yes, in the future, there will be a function like
-`fgitR::install_fgit("womeimingzi11/fgitR")` to accelerate the
-installation of development version of `fgitR`.
-</del>
-
 ## Install package from Source
 
 ``` r
 library(fgitR)
-#> 
-#>     We thank FastGit UK Team who creates fastgit.org.
-#>     Due to the compatibility of licence,
-#>     git and its derived libs are not included in this package.
-#>     Before you start using fgitR, please make sure you have installed git.
-#>     For Windows, fgitR is not available yet.
-#> 
+
+# fgitR can install package by Repository's Name
+# fgitR_install("https://github.com/r-lib/diffviewer")
 
 # fgitR can install package by Repository's URL
 fgitR_install("r-lib/diffviewer")
 #> Try to clone by repository's name
-#> Repo has been cloned to/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp6tWhhk/r-lib/diffviewer
+#> Repo has been cloned to/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//RtmpaIUsRg/r-lib/diffviewer
 #> 
-#>      checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/Rtmp6tWhhk/r-lib/diffviewer/diffviewer/DESCRIPTION’ ...  ✓  checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/Rtmp6tWhhk/r-lib/diffviewer/diffviewer/DESCRIPTION’
+#>      checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/RtmpaIUsRg/r-lib/diffviewer/diffviewer/DESCRIPTION’ ...  ✓  checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/RtmpaIUsRg/r-lib/diffviewer/diffviewer/DESCRIPTION’
 #>   ─  preparing ‘diffviewer’:
 #>      checking DESCRIPTION meta-information ...  ✓  checking DESCRIPTION meta-information
 #>   ─  checking for LF line-endings in source and make files and shell scripts
@@ -63,37 +53,7 @@ fgitR_install("r-lib/diffviewer")
 #>   ─  building ‘diffviewer_0.1.1.9000.tar.gz’
 #>      
 #> Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
-#>   /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp6tWhhk/diffviewer_0.1.1.9000.tar.gz \
-#>   --install-tests 
-#> * installing to library ‘/Users/chenhan/R_lib_usr’
-#> * installing *source* package ‘diffviewer’ ...
-#> ** using staged installation
-#> ** R
-#> ** inst
-#> ** byte-compile and prepare package for lazy loading
-#> ** help
-#> *** installing help indices
-#> ** building package indices
-#> ** testing if installed package can be loaded from temporary location
-#> ** testing if installed package can be loaded from final location
-#> ** testing if installed package keeps a record of temporary installation path
-#> * DONE (diffviewer)
-
-# fgitR can install package by Repository's Name
-fgitR_install("https://github.com/r-lib/diffviewer")
-#> Try to clone from repository's url
-#> /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp6tWhhk/r-lib/diffviewer has been empty.
-#> Repo has been cloned to/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp6tWhhk/r-lib/diffviewer
-#> 
-#>      checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/Rtmp6tWhhk/r-lib/diffviewer/diffviewer/DESCRIPTION’ ...  ✓  checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/Rtmp6tWhhk/r-lib/diffviewer/diffviewer/DESCRIPTION’
-#>   ─  preparing ‘diffviewer’:
-#>      checking DESCRIPTION meta-information ...  ✓  checking DESCRIPTION meta-information
-#>   ─  checking for LF line-endings in source and make files and shell scripts
-#>   ─  checking for empty or unneeded directories
-#>   ─  building ‘diffviewer_0.1.1.9000.tar.gz’
-#>      
-#> Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
-#>   /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp6tWhhk/diffviewer_0.1.1.9000.tar.gz \
+#>   /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//RtmpaIUsRg/diffviewer_0.1.1.9000.tar.gz \
 #>   --install-tests 
 #> * installing to library ‘/Users/chenhan/R_lib_usr’
 #> * installing *source* package ‘diffviewer’ ...
@@ -112,7 +72,7 @@ fgitR_install("https://github.com/r-lib/diffviewer")
 
 ## To-Do
 
--   [ ] Branch
+-   [x] Branch
 -   [ ] Head
 -   [ ] Commit (may be imported from git2r)
 -   [ ] Pull
