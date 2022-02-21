@@ -36,3 +36,16 @@ git_check <- function() {
     )
   }
 }
+
+#' Check OS Type
+#'
+#'Due to the implement by `fgitR`.
+#'It does not support Windows yet.
+#'
+os_check <- function() {
+  if (.Platform$OS.type == "windows") {
+    stop(
+      "Windows is not supported yet by gitR."
+    )
+  }
+}
