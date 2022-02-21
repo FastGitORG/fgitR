@@ -24,14 +24,14 @@ fgit_branch <- function(repo) {
 
   ##  Functions from R/utils.R
   repo <-
-    fgitR:::git_repo_extract(url_or_repo = repo)
+    git_repo_extract(url_or_repo = repo)
 
   # Detect whether repository exists
   if (httr::http_error(paste0("https://github.com/", repo))) stop("Repository may not exist")
 
   # Set the domain of fastgit
   fast_git_domain <-
-    "https://hub.fastgit.org/"
+    "https://hub.fastgit.xyz/"
 
   # Jointing the Repo name and FastGit
   # as the url of Repo

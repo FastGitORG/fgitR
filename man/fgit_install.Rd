@@ -17,6 +17,6 @@ fgit_install(repo, branch = NULL, repo_check = TRUE)
 Install package from GitHub by FastGit accelerating
 }
 \examples{
-fgitR_install("https://github.com/womeimingzi11/fgitR")
-fgitR_install("womeimingzi11/fgitR")
+fgit_install("https://github.com/FastGitORG/fgitR")
+fgit_install("FastGitORG/fgitR")
 }

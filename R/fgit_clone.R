@@ -1,8 +1,8 @@
 #' Git Clone by FastGit's URL
 #'
-#' @param repo
+#' @param fgit_url
 #'
-#' The repository's name from GitHub.com
+#' The repository's name from FastGit.org
 #'
 #' @param target_dir
 #'
@@ -120,7 +120,7 @@ fgit_clone <- function(repo,
 
   # Set the domain of fastgit
   fast_git_domain <-
-    "https://hub.fastgit.org/"
+    "https://hub.fastgit.xyz/"
 
   # Jointing the Repo name and FastGit
   # as the url of Repo

@@ -5,7 +5,7 @@
 
   packageStartupMessage(
     "
-    We thank FastGit UK Team who creates fastgit.org.
+    fgitR is created by Han Chen and maintained by FastGit UK Team who creates fastgit.org.
     Due to the compatibility of licence,
     git and its derived libs are not included in this package.
     Before you start using fgitR, please make sure you have installed git.

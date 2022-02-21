@@ -13,6 +13,8 @@ fgit_clone_from_url(
 )
 }
 \arguments{
+\item{fgit_url}{The repository's name from FastGit.org}
+
 \item{target_dir}{The output directory}
 
 \item{branch}{Clone from which branch.}
@@ -20,8 +22,6 @@ fgit_clone_from_url(
 \item{overwrite}{Overwrite the exist directories. Default is `FALSE`}
 
 \item{verbose}{Verbose logs. Default is `TRUE`}
-
-\item{repo}{The repository's name from GitHub.com}
 }
 \description{
 Git Clone by FastGit's URL

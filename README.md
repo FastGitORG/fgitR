@@ -112,7 +112,7 @@ make further operations.
 There is definitely no reason to reinvent the wheel, import functions
 from `git2r` to implement `git clone`, `git pull` and `git push` should
 be fantastic. However, `git2r` is a GPL licensed project, while `fgitR`
-is under MIT. I am not sure if it is accpetable to import involving
+is under MIT. I am not sure if it is acceptable to import involving
 functions from `git2r` to `fgitR` without changing license?
 
 **P.S. I am not considering to change my license.**

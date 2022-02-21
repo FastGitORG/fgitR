@@ -15,8 +15,8 @@
 #' @export
 #'
 #' @examples
-#' fgitR_install("https://github.com/womeimingzi11/fgitR")
-#' fgitR_install("womeimingzi11/fgitR")
+#' fgit_install("https://github.com/FastGitORG/fgitR")
+#' fgit_install("FastGitORG/fgitR")
 fgit_install <-
   function(repo,
            branch = NULL,
