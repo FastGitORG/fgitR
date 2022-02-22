@@ -14,13 +14,8 @@ coverage](https://codecov.io/gh/FastGitORG/fgitR/branch/main/graph/badge.svg)](h
 [FastGit](https://doc.fastgit.org/) can work as a mirror of GitHub to
 make significant acceleration.
 
-`fgitR` is a package to do git operation with FastGit automatically.
-
-For current stage, `fgitR` is only tested under macOS, and it should
-works well on OS with POSIX. For Windows, we will test and fix in the
-future.
-
-## Installation
+`fgitR` is a package to do git operation with FastGit automatically. \##
+Installation
 
 Once the initial development finish, we will post `fgitR` to CRAN. So
 for, please install development version of `fgitR` from GitHub:
@@ -108,12 +103,6 @@ Due to `git` is not only clone to local, but also contribute back. But
 in the `git clone` or `fgit clone` procedure, the remote will be set as
 `fastgit.org` or other mirror domain. Hence, there is nothing special to
 make further operations.
-
-There is definitely no reason to reinvent the wheel, import functions
-from `git2r` to implement `git clone`, `git pull` and `git push` should
-be fantastic. However, `git2r` is a GPL licensed project, while `fgitR`
-is under MIT. I am not sure if it is acceptable to import involving
-functions from `git2r` to `fgitR` without changing license?
 
 **P.S. I am not considering to change my license.**
 

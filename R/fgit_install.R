@@ -31,11 +31,6 @@ fgit_install <-
       return_dir = TRUE
     )
 
-    # List sub directory
-    # structure as user/repo/repo
-    source_dir <-
-      list.files(target_dir, full.names = TRUE)
-
     # Install package from source directory
-    devtools::install(pkg = source_dir)
+    devtools::install(pkg = target_dir)
   }
