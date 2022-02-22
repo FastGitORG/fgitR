@@ -23,38 +23,28 @@
 fgit_clone_from_url <- function(fgit_url,
                                 target_dir,
                                 branch = NULL,
-                                overwrite = FALSE,
+                                # overwrite = FALSE,
                                 verbose = TRUE) {
 
-  # Check whether git is available
-  git_check()
-
-  # Assemble the Git clone command
-  # use -C argument to set the
-  # target dir
-  clone_cmd <-
+  # For default branch
     if (is.null(branch)) {
-      paste("git -C", target_dir, "clone", fgit_url)
+      git2r::clone(url = fgit_url, local_path = target_dir)
     } else {
 
       # Detect branch existence
       ## Get branch list
-      branch_ls_cmd <-
-        paste("git ls-remote", fgit_url)
-
       ranch_ls <-
-        system(branch_ls_cmd, intern = TRUE)
+        git2r::remote_ls(fgit_url)
 
       # Stop once branch not exist
-      if (!any(grepl(paste0(branch, "$"), x = ranch_ls))) {
+      if (!any(grepl(paste0(branch, "$"), x = names(ranch_ls)))) {
         stop(branch, " branch does not exist")
       }
 
-      paste("git -C", target_dir, "clone", fgit_url, "--single-branch --branch", branch)
+      git2r::clone(url = fgit_url, local_path = target_dir, branch = branch)
     }
 
-  system(clone_cmd)
-  message(paste0("Repo has been cloned to", target_dir))
+  message(paste0("Repo has been cloned to ", target_dir))
 }
 
 #' Git Clone from URL by FastGit
@@ -102,9 +92,6 @@ fgit_clone <- function(repo,
                        overwrite = FALSE,
                        verbose = TRUE,
                        return_dir = FALSE) {
-  # Check whether git is availiable
-  git_check()
-
   # Convert URL to Repo
   # For repo in name format
   # nothing will happen
@@ -143,7 +130,6 @@ fgit_clone <- function(repo,
   fgit_clone_from_url(fgit_url,
     target_dir = target_dir,
     branch,
-    overwrite,
     verbose
   )
 

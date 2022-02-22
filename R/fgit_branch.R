@@ -39,11 +39,8 @@ fgit_branch <- function(repo) {
     paste0(fast_git_domain, repo)
 
   ## Get branch list
-  branch_ls_cmd <-
-    paste("git ls-remote",fgit_url)
-
   ranch_ls <-
-    system(branch_ls_cmd, intern = TRUE)
+    git2r::remote_ls(fgit_url)
 
-  gsub("^[a-zA-Z0-9]+(\tHEAD|\trefs/)", "", ranch_ls[-1])
+  names(ranch_ls)
 }

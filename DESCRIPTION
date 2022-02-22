@@ -24,6 +24,7 @@ Config/testthat/edition: 3
 RoxygenNote: 7.1.2
 Imports: 
     httr,
-    devtools
+    devtools,
+    git2r
 SystemRequirements: Git
 BugReports: https://github.com/FastGitORG/fgitR/issues
