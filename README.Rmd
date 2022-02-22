@@ -39,7 +39,7 @@ fgitR::fgit_install("FastGitORG/fgitR")
 
 ## Install package from Source
 
-```{r install_package_from_source, cache=TRUE}
+```{r install_package_from_source}
 library(fgitR)
 
 # fgitR can install package by Repository's Name
@@ -51,7 +51,7 @@ fgit_install("r-lib/diffviewer")
 
 ## List all branch from Remote
 
-```{r list_branch, cache=TRUE}
+```{r list_branch}
 branch_ls <-
   fgit_branch("FastGitORG/fgitR")
 

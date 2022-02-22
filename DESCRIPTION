@@ -1,6 +1,6 @@
 Package: fgitR
 Type: Package
-Title: Using FastGit to accelerate the access to GitHub
+Title: Using FastGit to Accelerate the Access to GitHub
 Version: 0.2.0
 Authors@R: 
     c(person(given = "Han",

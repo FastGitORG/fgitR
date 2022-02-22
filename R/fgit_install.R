@@ -26,6 +26,10 @@ fgit_install <-
     temp_dir <-
       tempdir()
 
+    # Extract repo from repo/URL
+    repo <-
+      git_repo_extract(repo)
+
     # Clone repo to temp directory
     # cloned directory will return
     # as target_dir
