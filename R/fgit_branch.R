@@ -15,9 +15,6 @@
 #' fgit_branch("FastGitORG/fgitR")
 #'
 fgit_branch <- function(repo) {
-  # Check whether git is availiable
-  git_check()
-
   # Convert URL to Repo
   # For repo in name format
   # nothing will happen
