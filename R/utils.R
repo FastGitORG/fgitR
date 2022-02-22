@@ -69,15 +69,15 @@ git_repo_extract <-
       # Remove domain from URL
       repo <-
         gsub("http(|s)://github.com/|github.com/", "", url)
-      return(repo)
     } else {
       message("Try to clone by repository's name")
       repo <- url_or_repo
-      return(repo)
     }
 
     # Detect whether repository exists
     if (isTRUE(repo_check)) {
       if (httr::http_error(paste0("https://github.com/", repo))) stop("Repository may not exist")
     }
+
+    return(repo)
   }

@@ -31,7 +31,6 @@ test_that("fgit_clone-Wrong repository", {
 
   # Wrong branch name
   expect_error(fgit_clone(target_repo,
-                          overwrite = TRUE,
-                          branch = "minister"),
+                          overwrite = TRUE),
                "Repository may not exist")
 })
