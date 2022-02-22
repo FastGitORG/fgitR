@@ -93,7 +93,7 @@ branch_ls
 #> [1] "HEAD"             "refs/heads/git2r" "refs/heads/main"
 ```
 
-### Questionary
+### Reinventing the wheel?
 
 For the initially consideration, we believe it is necessary to add
 following functions:
@@ -109,9 +109,8 @@ make further operations.
 
 ## Bug report
 
-It’s very common for API upgrades to make the downstream application,
-like amapGeocode,which is unavailable. Feel free to [let me
-know](mailto://chenhan28@gmail.com) once it’s broken or just open an
+Feel free to [let me know](mailto://chenhan28@gmail.com) once it’s
+broken or just open an
 <a class="github-button" href="https://github.com/FastGitORG/fgitR/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Issue FastGitORG/fgitR on GitHub">Issue</a>.
 
 ## Code of Conduct
