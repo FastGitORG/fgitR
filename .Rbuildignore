@@ -6,3 +6,5 @@
 ^\README_cache$
 local_test
 ^codecov\.yml$
+^CRAN-SUBMISSION$
+^cran-comments\.md$
