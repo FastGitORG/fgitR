@@ -1,6 +1,4 @@
 test_that("fgit_branch-Wrong repository", {
-  skip_on_cran()
-  skip_on_os("windows")
   skip_if_offline(host = "fastgit.org")
 
   target_repo <-

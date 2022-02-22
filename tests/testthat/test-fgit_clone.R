@@ -1,6 +1,4 @@
 test_that("fgit_clone-Do not forget overwrite", {
-  skip_on_cran()
-  skip_on_os("windows")
   skip_if_offline(host = "fastgit.org")
 
   target_repo <-
@@ -13,8 +11,6 @@ test_that("fgit_clone-Do not forget overwrite", {
 })
 
 test_that("fgit_clone-Wrong branch", {
-  skip_on_cran()
-  skip_on_os("windows")
   skip_if_offline(host = "fastgit.org")
 
   target_repo <-
@@ -28,8 +24,6 @@ test_that("fgit_clone-Wrong branch", {
 })
 
 test_that("fgit_clone-Wrong repository", {
-  skip_on_cran()
-  skip_on_os("windows")
   skip_if_offline(host = "fastgit.org")
 
   target_repo <-
