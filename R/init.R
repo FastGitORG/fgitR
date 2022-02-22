@@ -2,6 +2,7 @@
   # Init check wehter Git exists
   # Function from R/init.R
   git_check()
+  os_check()
 
   packageStartupMessage(
     "
