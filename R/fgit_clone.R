@@ -12,10 +12,6 @@
 #'
 #' Clone from which branch.
 #'
-#' @param overwrite
-#'
-#' Overwrite the exist directories. Default is `FALSE`
-#'
 #' @param verbose
 #'
 #' Verbose logs. Default is `TRUE`
@@ -74,11 +70,6 @@ fgit_clone_from_url <- function(fgit_url,
 #'
 #' Verbose logs. Default is `TRUE`
 #'
-#' @param return_dir
-#'
-#' Return directory as `target_dir` to parent environment?
-#' Somehow useful to catch the temp directory.
-#'
 #' @export
 #'
 #' @examples
@@ -90,8 +81,7 @@ fgit_clone <- function(repo,
                        branch = NULL,
                        repo_check = TRUE,
                        overwrite = FALSE,
-                       verbose = TRUE,
-                       return_dir = FALSE) {
+                       verbose = TRUE) {
   # Convert URL to Repo
   # For repo in name format
   # nothing will happen
@@ -99,11 +89,6 @@ fgit_clone <- function(repo,
   ##  Functions from R/utils.R
   repo <-
     git_repo_extract(url_or_repo = repo)
-
-  # Detect whether repository exists
-  if (isTRUE(repo_check)) {
-    if (httr::http_error(paste0("https://github.com/", repo))) stop("Repository may not exist")
-  }
 
   # Set the domain of fastgit
   fast_git_domain <-
@@ -132,7 +117,4 @@ fgit_clone <- function(repo,
     branch,
     verbose
   )
-
-  # Return target_dir to parent environmental
-  if (isTRUE(return_dir)) target_dir <<- target_dir
 }

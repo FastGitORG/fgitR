@@ -51,11 +51,15 @@ func_mk_dir <-
 #'
 #' URL or Name from GitHub.com
 #'
+#' @param repo_check
+#'
+#' Repo Existence Check
+#'
 #' @return
 #' Character like user/repository
 #'
 git_repo_extract <-
-  function(url_or_repo) {
+  function(url_or_repo, repo_check = TRUE) {
     # Check wheter input is a repo url
     if (grepl("^http(|s)://|github.com/", url_or_repo)) {
       message("Try to clone from repository's url")
@@ -69,5 +73,11 @@ git_repo_extract <-
     } else {
       message("Try to clone by repository's name")
       repo <- url_or_repo
+      return(repo)
+    }
+
+    # Detect whether repository exists
+    if (isTRUE(repo_check)) {
+      if (httr::http_error(paste0("https://github.com/", repo))) stop("Repository may not exist")
     }
   }

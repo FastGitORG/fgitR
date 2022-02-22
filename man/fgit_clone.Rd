@@ -10,8 +10,7 @@ fgit_clone(
   branch = NULL,
   repo_check = TRUE,
   overwrite = FALSE,
-  verbose = TRUE,
-  return_dir = FALSE
+  verbose = TRUE
 )
 }
 \arguments{
@@ -27,9 +26,6 @@ fgit_clone(
 \item{overwrite}{Overwrite the exist directories. Default is `FALSE`}
 
 \item{verbose}{Verbose logs. Default is `TRUE`}
-
-\item{return_dir}{Return directory as `target_dir` to parent environment?
-Somehow useful to catch the temp directory.}
 }
 \description{
 Git Clone from URL by FastGit

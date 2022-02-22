@@ -14,8 +14,6 @@ fgit_clone_from_url(fgit_url, target_dir, branch = NULL, verbose = TRUE)
 \item{branch}{Clone from which branch.}
 
 \item{verbose}{Verbose logs. Default is `TRUE`}
-
-\item{overwrite}{Overwrite the exist directories. Default is `FALSE`}
 }
 \description{
 Git Clone by FastGit's URL

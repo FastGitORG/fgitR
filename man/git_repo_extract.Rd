@@ -4,10 +4,12 @@
 \alias{git_repo_extract}
 \title{Extract the Repository Name from URL or Name}
 \usage{
-git_repo_extract(url_or_repo)
+git_repo_extract(url_or_repo, repo_check = TRUE)
 }
 \arguments{
 \item{url_or_repo}{URL or Name from GitHub.com}
+
+\item{repo_check}{Repo Existence Check}
 }
 \value{
 Character like user/repository

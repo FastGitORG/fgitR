@@ -21,15 +21,24 @@ fgit_install <-
   function(repo,
            branch = NULL,
            repo_check = TRUE) {
+
+    # Create temp dir
+    temp_dir <-
+      tempdir()
+
     # Clone repo to temp directory
     # cloned directory will return
     # as target_dir
     fgit_clone(repo,
-      branch = branch,
-      repo_check = repo_check,
-      overwrite = TRUE,
-      return_dir = TRUE
+               dir = temp_dir,
+               branch = branch,
+               repo_check = repo_check,
+               overwrite = TRUE
     )
+
+    # Assemble dir/repo
+    target_dir <-
+      file.path(temp_dir, repo)
 
     # Install package from source directory
     devtools::install(pkg = target_dir)
