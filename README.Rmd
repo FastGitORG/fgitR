@@ -53,7 +53,7 @@ fgit_install("r-lib/diffviewer")
 
 ```{r list_branch}
 branch_ls <-
-  fgit_branch("https://github.com/tidyverse/tidyverse/")
+  fgit_branch("FastGitORG/fgitR")
 
 branch_ls
 ```
