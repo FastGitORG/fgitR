@@ -17,6 +17,8 @@ fgit_install(repo, branch = NULL, repo_check = TRUE)
 Install package from GitHub by FastGit accelerating
 }
 \examples{
+\dontrun{
 fgit_install("https://github.com/FastGitORG/fgitR")
 fgit_install("FastGitORG/fgitR")
+}
 }

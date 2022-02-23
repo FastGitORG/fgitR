@@ -73,9 +73,10 @@ fgit_clone_from_url <- function(fgit_url,
 #' @export
 #'
 #' @examples
-#'
+#'\dontrun{
 #' fgit_clone("https://github.com/womeimingzi11/fgitR", overwrite = TRUE)
 #' fgit_clone("womeimingzi11/fgitR", overwrite = TRUE)
+#' }
 fgit_clone <- function(repo,
                        dir = tempdir(),
                        branch = NULL,

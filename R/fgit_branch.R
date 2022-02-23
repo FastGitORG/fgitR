@@ -11,9 +11,10 @@
 #' @export
 #'
 #' @examples
+#'\dontrun{
 #' fgit_branch("https://github.com/FastGitORG/fgitR")
 #' fgit_branch("FastGitORG/fgitR")
-#'
+#'}
 fgit_branch <- function(repo) {
   # Convert URL to Repo
   # For repo in name format

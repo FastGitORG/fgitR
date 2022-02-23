@@ -11,8 +11,7 @@ Authors@R:
              family = "Jiang",
              role = "ctb",
              email = "243016042@qq.com"))
-Description: FastGit<https://doc.fastgit.org/> can work as a mirror of GitHub to make significant acceleration.
-    fgitR is a package to do git operation with FastGit automatically.
+Description: FastGit<https://doc.fastgit.org/> can work as a mirror of GitHub to make significant acceleration. fgitR is a package to do git operation with FastGit automatically.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

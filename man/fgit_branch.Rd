@@ -16,7 +16,8 @@ A vector of branches
 List all branch from a repository
 }
 \examples{
+\dontrun{
 fgit_branch("https://github.com/FastGitORG/fgitR")
 fgit_branch("FastGitORG/fgitR")
-
+}
 }

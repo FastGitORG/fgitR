@@ -31,7 +31,8 @@ fgit_clone(
 Git Clone from URL by FastGit
 }
 \examples{
-
+\dontrun{
 fgit_clone("https://github.com/womeimingzi11/fgitR", overwrite = TRUE)
 fgit_clone("womeimingzi11/fgitR", overwrite = TRUE)
+}
 }

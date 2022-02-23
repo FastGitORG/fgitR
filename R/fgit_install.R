@@ -15,8 +15,10 @@
 #' @export
 #'
 #' @examples
+#'\dontrun{
 #' fgit_install("https://github.com/FastGitORG/fgitR")
 #' fgit_install("FastGitORG/fgitR")
+#' }
 fgit_install <-
   function(repo,
            branch = NULL,
