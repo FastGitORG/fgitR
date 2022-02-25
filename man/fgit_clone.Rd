@@ -27,6 +27,9 @@ fgit_clone(
 
 \item{verbose}{Verbose logs. Default is `TRUE`}
 }
+\value{
+No return value, called for side effects
+}
 \description{
 Git Clone from URL by FastGit
 }

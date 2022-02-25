@@ -12,6 +12,10 @@
 #'
 #' Check the existence of repository
 #'
+#' @return
+#'
+#' No return value, called for side effects
+#'
 #' @export
 #'
 #' @examples
@@ -19,6 +23,7 @@
 #' fgit_install("https://github.com/FastGitORG/fgitR")
 #' fgit_install("FastGitORG/fgitR")
 #' }
+#'
 fgit_install <-
   function(repo,
            branch = NULL,

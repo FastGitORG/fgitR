@@ -70,6 +70,10 @@ fgit_clone_from_url <- function(fgit_url,
 #'
 #' Verbose logs. Default is `TRUE`
 #'
+#' @return
+#'
+#' No return value, called for side effects
+#'
 #' @export
 #'
 #' @examples

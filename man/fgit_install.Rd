@@ -13,6 +13,9 @@ fgit_install(repo, branch = NULL, repo_check = TRUE)
 
 \item{repo_check}{Check the existence of repository}
 }
+\value{
+No return value, called for side effects
+}
 \description{
 Install package from GitHub by FastGit accelerating
 }
@@ -21,4 +24,5 @@ Install package from GitHub by FastGit accelerating
 fgit_install("https://github.com/FastGitORG/fgitR")
 fgit_install("FastGitORG/fgitR")
 }
+
 }
