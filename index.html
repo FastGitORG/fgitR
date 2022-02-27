@@ -62,8 +62,12 @@
 </h1></div>
 <!-- badges: start -->
 
-<p><a href="https://doc.fastgit.org/" class="external-link">FastGit</a> can work as a mirror of GitHub to make significant acceleration.</p>
-<p><code>fgitR</code> is a package to do git operation with FastGit automatically. ## Installation</p>
+<!-- badges: end -->
+<p><a href="https://doc.fastgit.org/" class="external-link"><code>FastGit</code></a> works as a mirror of <code>GitHub</code> to make significant accelerations.</p>
+<p><code>fgitR</code> is a package to do git operation with <code>FastGit</code> automatically.</p>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
 <p>Once the initial development finish, we will post <code>fgitR</code> to CRAN. So for, please install development version of <code>fgitR</code> from GitHub: <!-- You can install the released version of fgitR from [CRAN](https://CRAN.R-project.org) with: --></p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># For initial install</span>
@@ -71,6 +75,7 @@
 
 <span class="co"># For upgrade installed `fgitR`</span>
 <span class="fu">fgitR</span><span class="fu">::</span><span class="fu"><a href="reference/fgit_install.html">fgit_install</a></span><span class="op">(</span><span class="st">"FastGitORG/fgitR"</span><span class="op">)</span></code></pre></div>
+</div>
 <div class="section level2">
 <h2 id="install-package-from-source">Install package from Source<a class="anchor" aria-label="anchor" href="#install-package-from-source"></a>
 </h2>
@@ -85,7 +90,7 @@
 
 <span class="co"># fgitR can install package by Repository's URL</span>
 <span class="fu"><a href="reference/fgit_install.html">fgit_install</a></span><span class="op">(</span><span class="st">"r-lib/diffviewer"</span><span class="op">)</span>
-<span class="co">#&gt; cloning into '/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp1wEK3o/r-lib/diffviewer'...</span>
+<span class="co">#&gt; cloning into '/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//RtmpFA0gnX/r-lib/diffviewer'...</span>
 <span class="co">#&gt; Receiving objects:   1% (4/398),   31 kb</span>
 <span class="co">#&gt; Receiving objects:  11% (44/398),   31 kb</span>
 <span class="co">#&gt; Receiving objects:  21% (84/398),   31 kb</span>
@@ -97,17 +102,9 @@
 <span class="co">#&gt; Receiving objects:  81% (323/398),   79 kb</span>
 <span class="co">#&gt; Receiving objects:  91% (363/398),  234 kb</span>
 <span class="co">#&gt; Receiving objects: 100% (398/398),  234 kb, done.</span>
-<span class="co">#&gt; Repo has been cloned to /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp1wEK3o/r-lib/diffviewer</span>
-<span class="co">#&gt; jsonlite (1.7.3 -&gt; 1.8.0) [CRAN]</span>
-<span class="co">#&gt; Installing 1 packages: jsonlite</span>
-<span class="co">#&gt; Installing package into '/Users/chenhan/R_lib_usr'</span>
-<span class="co">#&gt; (as 'lib' is unspecified)</span>
+<span class="co">#&gt; Repo has been cloned to /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//RtmpFA0gnX/r-lib/diffviewer</span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt;   There is a binary version available but the source version is later:</span>
-<span class="co">#&gt;          binary source needs_compilation</span>
-<span class="co">#&gt; jsonlite  1.7.3  1.8.0              TRUE</span>
-<span class="co">#&gt; installing the source package 'jsonlite'</span>
-<span class="co">#&gt; * checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/Rtmp1wEK3o/r-lib/diffviewer/DESCRIPTION’ ... OK</span>
+<span class="co">#&gt; * checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/RtmpFA0gnX/r-lib/diffviewer/DESCRIPTION’ ... OK</span>
 <span class="co">#&gt; * preparing ‘diffviewer’:</span>
 <span class="co">#&gt; * checking DESCRIPTION meta-information ... OK</span>
 <span class="co">#&gt; * checking for LF line-endings in source and make files and shell scripts</span>
@@ -115,7 +112,7 @@
 <span class="co">#&gt; * building ‘diffviewer_0.1.1.9000.tar.gz’</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \</span>
-<span class="co">#&gt;   /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp1wEK3o/diffviewer_0.1.1.9000.tar.gz \</span>
+<span class="co">#&gt;   /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//RtmpFA0gnX/diffviewer_0.1.1.9000.tar.gz \</span>
 <span class="co">#&gt;   --install-tests </span>
 <span class="co">#&gt; * installing to library ‘/Users/chenhan/R_lib_usr’</span>
 <span class="co">#&gt; * installing *source* package ‘diffviewer’ ...</span>
@@ -139,7 +136,8 @@
   <span class="fu"><a href="reference/fgit_branch.html">fgit_branch</a></span><span class="op">(</span><span class="st">"FastGitORG/fgitR"</span><span class="op">)</span>
 
 <span class="va">branch_ls</span>
-<span class="co">#&gt; [1] "HEAD"             "refs/heads/git2r" "refs/heads/main"</span></code></pre></div>
+<span class="co">#&gt; [1] "HEAD"                "refs/heads/gh-pages" "refs/heads/git2r"   </span>
+<span class="co">#&gt; [4] "refs/heads/main"</span></code></pre></div>
 <div class="section level3">
 <h3 id="reinventing-the-wheel">Reinventing the wheel?<a class="anchor" aria-label="anchor" href="#reinventing-the-wheel"></a>
 </h3>
