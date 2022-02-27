@@ -8,3 +8,6 @@ local_test
 ^codecov\.yml$
 ^CRAN-SUBMISSION$
 ^cran-comments\.md$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

@@ -27,3 +27,4 @@ Imports:
     git2r
 SystemRequirements: Git
 BugReports: https://github.com/FastGitORG/fgitR/issues
+URL: https://fastgitorg.github.io/fgitR/
