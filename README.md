@@ -9,13 +9,15 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![Codecov test
 coverage](https://codecov.io/gh/FastGitORG/fgitR/branch/main/graph/badge.svg)](https://app.codecov.io/gh/FastGitORG/fgitR?branch=main)
+
 <!-- badges: end -->
 
-[FastGit](https://doc.fastgit.org/) can work as a mirror of GitHub to
-make significant acceleration.
+[`FastGit`](https://doc.fastgit.org/) works as a mirror of `GitHub` to
+make significant accelerations.
 
-`fgitR` is a package to do git operation with FastGit automatically. \##
-Installation
+`fgitR` is a package to do git operation with `FastGit` automatically.
+
+## Installation
 
 Once the initial development finish, we will post `fgitR` to CRAN. So
 for, please install development version of `fgitR` from GitHub:
@@ -42,7 +44,7 @@ library(fgitR)
 
 # fgitR can install package by Repository's URL
 fgit_install("r-lib/diffviewer")
-#> cloning into '/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp1wEK3o/r-lib/diffviewer'...
+#> cloning into '/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//RtmpFA0gnX/r-lib/diffviewer'...
 #> Receiving objects:   1% (4/398),   31 kb
 #> Receiving objects:  11% (44/398),   31 kb
 #> Receiving objects:  21% (84/398),   31 kb
@@ -54,17 +56,9 @@ fgit_install("r-lib/diffviewer")
 #> Receiving objects:  81% (323/398),   79 kb
 #> Receiving objects:  91% (363/398),  234 kb
 #> Receiving objects: 100% (398/398),  234 kb, done.
-#> Repo has been cloned to /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp1wEK3o/r-lib/diffviewer
-#> jsonlite (1.7.3 -> 1.8.0) [CRAN]
-#> Installing 1 packages: jsonlite
-#> Installing package into '/Users/chenhan/R_lib_usr'
-#> (as 'lib' is unspecified)
+#> Repo has been cloned to /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//RtmpFA0gnX/r-lib/diffviewer
 #> 
-#>   There is a binary version available but the source version is later:
-#>          binary source needs_compilation
-#> jsonlite  1.7.3  1.8.0              TRUE
-#> installing the source package 'jsonlite'
-#> * checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/Rtmp1wEK3o/r-lib/diffviewer/DESCRIPTION’ ... OK
+#> * checking for file ‘/private/var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T/RtmpFA0gnX/r-lib/diffviewer/DESCRIPTION’ ... OK
 #> * preparing ‘diffviewer’:
 #> * checking DESCRIPTION meta-information ... OK
 #> * checking for LF line-endings in source and make files and shell scripts
@@ -72,7 +66,7 @@ fgit_install("r-lib/diffviewer")
 #> * building ‘diffviewer_0.1.1.9000.tar.gz’
 #> 
 #> Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
-#>   /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//Rtmp1wEK3o/diffviewer_0.1.1.9000.tar.gz \
+#>   /var/folders/wh/j50n_j8s28l0t3wlmkw6rsdc0000gn/T//RtmpFA0gnX/diffviewer_0.1.1.9000.tar.gz \
 #>   --install-tests 
 #> * installing to library ‘/Users/chenhan/R_lib_usr’
 #> * installing *source* package ‘diffviewer’ ...
@@ -96,7 +90,8 @@ branch_ls <-
   fgit_branch("FastGitORG/fgitR")
 
 branch_ls
-#> [1] "HEAD"             "refs/heads/git2r" "refs/heads/main"
+#> [1] "HEAD"                "refs/heads/gh-pages" "refs/heads/git2r"   
+#> [4] "refs/heads/main"
 ```
 
 ### Reinventing the wheel?

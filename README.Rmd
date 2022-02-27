@@ -16,18 +16,18 @@ knitr::opts_chunk$set(
 # fgitR
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![Codecov test coverage](https://codecov.io/gh/FastGitORG/fgitR/branch/main/graph/badge.svg)](https://app.codecov.io/gh/FastGitORG/fgitR?branch=main)
+
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental) [![Codecov test coverage](https://codecov.io/gh/FastGitORG/fgitR/branch/main/graph/badge.svg)](https://app.codecov.io/gh/FastGitORG/fgitR?branch=main)
+
 <!-- badges: end -->
 
-[FastGit](https://doc.fastgit.org/) can work as a mirror of GitHub to make significant acceleration.
+[`FastGit`](https://doc.fastgit.org/) works as a mirror of `GitHub` to make significant accelerations.
 
-`fgitR` is a package to do git operation with FastGit automatically.
+`fgitR` is a package to do git operation with `FastGit` automatically.
+
 ## Installation
 
-Once the initial development finish, we will post `fgitR` to CRAN.
-So for, please install development version of `fgitR` from GitHub:
-<!-- You can install the released version of fgitR from [CRAN](https://CRAN.R-project.org) with: -->
+Once the initial development finish, we will post `fgitR` to CRAN. So for, please install development version of `fgitR` from GitHub: <!-- You can install the released version of fgitR from [CRAN](https://CRAN.R-project.org) with: -->
 
 ``` r
 # For initial install
@@ -39,7 +39,7 @@ fgitR::fgit_install("FastGitORG/fgitR")
 
 ## Install package from Source
 
-```{r install_package_from_source}
+```{r install_package_from_source, cache=TRUE}
 library(fgitR)
 
 # fgitR can install package by Repository's Name
@@ -51,7 +51,7 @@ fgit_install("r-lib/diffviewer")
 
 ## List all branch from Remote
 
-```{r list_branch}
+```{r list_branch, cache=TRUE}
 branch_ls <-
   fgit_branch("FastGitORG/fgitR")
 
@@ -62,9 +62,9 @@ branch_ls
 
 For the initially consideration, we believe it is necessary to add following functions:
 
-- Commit
-- Pull
-- Push
+-   Commit
+-   Pull
+-   Push
 
 Due to `git` is not only clone to local, but also contribute back. But in the `git clone` or `fgit clone` procedure, the remote will be set as `fastgit.org` or other mirror domain. Hence, there is nothing special to make further operations.
 
