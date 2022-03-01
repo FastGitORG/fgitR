@@ -6,10 +6,9 @@
 <!-- badges: start -->
 
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![Codecov test
 coverage](https://codecov.io/gh/FastGitORG/fgitR/branch/main/graph/badge.svg)](https://app.codecov.io/gh/FastGitORG/fgitR?branch=main)
-
 <!-- badges: end -->
 
 [`FastGit`](https://doc.fastgit.org/) works as a mirror of `GitHub` to
@@ -19,12 +18,15 @@ make significant accelerations.
 
 ## Installation
 
-Once the initial development finish, we will post `fgitR` to CRAN. So
-for, please install development version of `fgitR` from GitHub:
-<!-- You can install the released version of fgitR from [CRAN](https://CRAN.R-project.org) with: -->
+`figtR` has been released in
+[CRAN](https://CRAN.R-project.org/package=fgitR). You can install the
+released version of fgitR from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-# For initial install
+# Install from CRAN
+install.packages("fgitR")
+
+# Compiling from Source
 remotes::install_github("FastGitORG/fgitR")
 
 # For upgrade installed `fgitR`
